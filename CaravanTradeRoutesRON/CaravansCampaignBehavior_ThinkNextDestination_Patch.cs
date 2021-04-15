@@ -30,10 +30,8 @@ namespace CaravanTradeRoutesRON
             {
                 return;
             }
-
-
-            Town nextTown = null; 
-            __result = nextTown;
+             
+            __result = loadedSettlement;
         }
     }
 }

@@ -7,6 +7,7 @@ using TaleWorlds.Library;
 using System;
 using System.Data;
 using System.Diagnostics;
+using HarmonyLib;
 
 namespace CaravanTradeRoutesRON
 {
@@ -21,9 +22,14 @@ namespace CaravanTradeRoutesRON
         {
             if (!(game.GameType is Campaign)) { return; }
 
-            LoadTradeRoutesFromXml();
-
             new HarmonyLib.Harmony("CaravanTradeRoutesRON.patcher").PatchAll();
+        }
+
+        public override void OnGameInitializationFinished(Game game)
+        {
+            if (!(game.GameType is Campaign)) { return; }
+
+            LoadTradeRoutesFromXml();
         }
 
         public static void LoadTradeRoutesFromXml()
@@ -35,29 +41,32 @@ namespace CaravanTradeRoutesRON
             Dictionary<int, Town> tempTownList = new Dictionary<int, Town>();
             int count;
 
+
             foreach (XElement tradeRouteCount in listTradeRoutes)
             {
-                Debug.DisplayDebugMessage(tradeRouteCount.Attribute("name").Value + "is loaded");
+
+                FileLog.Log(tradeRouteCount.Attribute("name").Value + " is loaded");
 
                 tempListTown = tradeRouteCount.Element("towns").Elements();
                 count = 0;
 
                 foreach (XElement townCount in tempListTown)
                 {
-                    Debug.DisplayDebugMessage(townCount.Attribute("name").Value + "is loaded");
+                    FileLog.Log(townCount.Attribute("name").Value + " is loaded");
 
                     foreach (Settlement town in Campaign.Current.Settlements)
                     {
-                        if (town.IsTown && town.Name == townCount.Attributes("name"))
+                        if (town.IsTown && town.Name.ToString() == townCount.Attribute("name").Value)
                         {
                             tempTownList.Add(count, town.Town);
-
-                            Debug.DisplayDebugMessage(town.Name + "is loaded into the tempTownList");
+                            count++;
+                            FileLog.Log(town.Name.ToString() + " is loaded into the tempTownList");
                         }
                     }
                     count++;
                 }
-                tradeRoutes.Add(tradeRouteCount.Attributes("name"), tempTownList);
+                tradeRoutes.Add(tradeRouteCount.Attribute("name").Value, tempTownList);
+                FileLog.Log(tradeRouteCount.Attribute("name").Value + " is loaded into Dictionary containing " + tempTownList.Count.ToString() + " Elements");
             }
         }
     }
