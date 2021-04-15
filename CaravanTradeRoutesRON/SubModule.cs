@@ -4,10 +4,8 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using System.Xml.Linq;
 using TaleWorlds.Library;
-using System;
-using System.Data;
-using System.Diagnostics;
 using HarmonyLib;
+using TaleWorlds.SaveSystem;
 
 namespace CaravanTradeRoutesRON
 {
@@ -16,7 +14,9 @@ namespace CaravanTradeRoutesRON
         public static readonly string xmlPath = string.Concat(BasePath.Name, "Modules/CaravanTradeRoutesRON/tradeRoutes.xml");
 
         public static Dictionary<string, Dictionary<int, Town>> tradeRoutes = new Dictionary<string, Dictionary<int, Town>>();
-        public static Dictionary<MobileParty, Town> currentDestination = new Dictionary<MobileParty, Town>();
+
+        [SaveableField(21360)]
+        public static Dictionary<MobileParty, string> currentDestination = new Dictionary<MobileParty, string>();
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {

@@ -1,10 +1,4 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
 
@@ -15,23 +9,34 @@ namespace CaravanTradeRoutesRON
     {
         public static void Postfix(ref Town __result, MobileParty caravanParty)
         { 
-            if(caravanParty.LeaderHero != Hero.MainHero) {  return; }
+            if(caravanParty.LeaderHero != Hero.MainHero) { return; }
 
             bool tradeRouteLoaded = SubModule.tradeRoutes.TryGetValue("westernTradeRoute", out var tradeRoutesTownDictionary);
 
-            if (!tradeRouteLoaded)
+            if (!tradeRouteLoaded) { return; }
+
+            bool destinationLoaded = SubModule.currentDestination.TryGetValue(caravanParty, out string oldTownString);
+
+            int index = -1;
+
+            for(int i = 0; i < tradeRoutesTownDictionary.Count; i++)
             {
-                return;
+                if (destinationLoaded && tradeRoutesTownDictionary[i].Name.ToString() == oldTownString)
+                {
+                    index = i;
+                    break;
+                }
             }
 
-            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(0, out var loadedSettlement);
+            if (index == tradeRoutesTownDictionary.Count - 1) { index = -1; }
 
-            if (!townLoaded)
-            {
-                return;
-            }
+            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index+1, out var loadedSettlement);
+
+            if (!townLoaded) { return; }
              
             __result = loadedSettlement;
+            SubModule.currentDestination.Remove(caravanParty);
+            SubModule.currentDestination.Add(caravanParty, loadedSettlement.Name.ToString());
         }
     }
 }
