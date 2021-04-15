@@ -17,6 +17,21 @@ namespace CaravanTradeRoutesRON
         { 
             if(caravanParty.LeaderHero != Hero.MainHero) {  return; }
 
+            bool tradeRouteLoaded = SubModule.tradeRoutes.TryGetValue("westernTradeRoute", out var tradeRoutesTownDictionary);
+
+            if (!tradeRouteLoaded)
+            {
+                return;
+            }
+
+            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(0, out var loadedSettlement);
+
+            if (!townLoaded)
+            {
+                return;
+            }
+
+
             Town nextTown = null; 
             __result = nextTown;
         }
