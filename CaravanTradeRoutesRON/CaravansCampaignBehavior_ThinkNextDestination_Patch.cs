@@ -9,9 +9,13 @@ namespace CaravanTradeRoutesRON
     {
         public static void Postfix(ref Town __result, MobileParty caravanParty)
         { 
-            if(caravanParty.LeaderHero != Hero.MainHero) { return; }
+            if(caravanParty.LeaderHero.Clan != Hero.MainHero.Clan) { return; }
 
-            bool tradeRouteLoaded = SubModule.tradeRoutes.TryGetValue("westernTradeRoute", out var tradeRoutesTownDictionary);
+            bool caravanRegistered = SubModule.caravanTradeRoutes.TryGetValue(caravanParty, out var tradeRouteString);
+
+            if (!caravanRegistered) { return; }
+
+            bool tradeRouteLoaded = SubModule.tradeRoutes.TryGetValue(tradeRouteString, out var tradeRoutesTownDictionary);
 
             if (!tradeRouteLoaded) { return; }
 

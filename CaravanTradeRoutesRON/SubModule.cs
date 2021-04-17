@@ -13,10 +13,14 @@ namespace CaravanTradeRoutesRON
     {
         public static readonly string xmlPath = string.Concat(BasePath.Name, "Modules/CaravanTradeRoutesRON/tradeRoutes.xml");
 
-        public static Dictionary<string, Dictionary<int, Town>> tradeRoutes = new Dictionary<string, Dictionary<int, Town>>();
+        public static List<string> tradeRouteList;
+        public static Dictionary<string, Dictionary<int, Town>> tradeRoutes;
 
         [SaveableField(21360)]
-        public static Dictionary<MobileParty, string> currentDestination = new Dictionary<MobileParty, string>();
+        public static Dictionary<MobileParty, string> currentDestination;
+
+        [SaveableField(21361)]
+        public static Dictionary<MobileParty, string> caravanTradeRoutes;
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
@@ -66,6 +70,7 @@ namespace CaravanTradeRoutesRON
                     count++;
                 }
                 tradeRoutes.Add(tradeRouteCount.Attribute("name").Value, tempTownList);
+                tradeRouteList.Add(tradeRouteCount.Attribute("name").Value);
                 FileLog.Log(tradeRouteCount.Attribute("name").Value + " is loaded into Dictionary containing " + tempTownList.Count.ToString() + " Elements");
             }
         }
