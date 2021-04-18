@@ -9,8 +9,7 @@ namespace CaravanTradeRoutesRON
     {
         public static void Postfix(ref Town __result, MobileParty caravanParty)
         {
-                if (caravanParty.LeaderHero == null || Hero.MainHero.Clan == null || caravanParty.LeaderHero.Clan != Hero.MainHero.Clan) { return; }
-            
+            if (caravanParty.LeaderHero == null || Hero.MainHero.Clan == null || caravanParty.LeaderHero.Clan != Hero.MainHero.Clan) { return; }
 
             bool caravanRegistered = SubModule.caravanTradeRoutes.TryGetValue(caravanParty, out var tradeRouteString);
 
@@ -35,10 +34,12 @@ namespace CaravanTradeRoutesRON
 
             if (index == tradeRoutesTownDictionary.Count - 1) { index = -1; }
 
+            if (destinationLoaded && (caravanParty.CurrentSettlement == null || caravanParty.CurrentSettlement.ToString() != oldTownString)) { index -= 1; }
+
             bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index+1, out var loadedSettlement);
 
             if (!townLoaded) { return; }
-             
+            
             __result = loadedSettlement;
             SubModule.currentDestination.Remove(caravanParty);
             SubModule.currentDestination.Add(caravanParty, loadedSettlement.Name.ToString());

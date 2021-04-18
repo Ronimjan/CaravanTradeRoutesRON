@@ -22,6 +22,9 @@ namespace CaravanTradeRoutesRON
         [SaveableField(21361)]
         public static Dictionary<MobileParty, string> caravanTradeRoutes = new Dictionary<MobileParty, string>();
 
+        [SaveableField(21362)]
+        public static Dictionary<MobileParty, bool> destinationReached = new Dictionary<MobileParty, bool>();
+
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
             if (!(game.GameType is Campaign)) { return; }
@@ -44,8 +47,8 @@ namespace CaravanTradeRoutesRON
         public static void LoadTradeRoutesFromXml()
         {
             XDocument doc = XDocument.Load(xmlPath);
-            XElement tradeRoutes = doc.Root.Element("tradeRoutes");
-            IEnumerable<XElement> listTradeRoutes = tradeRoutes.Elements();
+            XElement tradeRoutesElement = doc.Root.Element("tradeRoutes");
+            IEnumerable<XElement> listTradeRoutes = tradeRoutesElement.Elements();
             IEnumerable<XElement> tempListTown;
             Dictionary<int, Town> tempTownList = new Dictionary<int, Town>();
             int count;
@@ -72,7 +75,6 @@ namespace CaravanTradeRoutesRON
                             FileLog.Log(town.Name.ToString() + " is loaded into the tempTownList");
                         }
                     }
-                    count++;
                 }
                 tradeRoutes.Add(tradeRouteCount.Attribute("name").Value, tempTownList);
                 tradeRouteList.Add(tradeRouteCount.Attribute("name").Value);

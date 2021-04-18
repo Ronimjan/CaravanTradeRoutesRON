@@ -25,7 +25,6 @@ namespace CaravanTradeRoutesRON
 
             foreach (string name in SubModule.tradeRouteList)
             {
-                temp = name;
                 starter.AddPlayerLine("trade_route_" + name, "caravan_trade_routes_answer", "trade_route_" + name, "Follow the " + name, null, new ConversationSentence.OnConsequenceDelegate(AddTradeRouteConsequence));
                 starter.AddDialogLine("trade_route_" + name + "_answer", "trade_route_" + name, "caravan_pretalk", "Okay, we will follow the " + name, null, null);
             }
@@ -39,10 +38,9 @@ namespace CaravanTradeRoutesRON
 
         private static bool IsOwnedByHeroCondition()
         {
-            if(MobileParty.ConversationParty.LeaderHero.Clan == Hero.MainHero.Clan) 
-            { 
-                return true; 
-            }
+            if(MobileParty.ConversationParty.LeaderHero == null) { return false; }
+
+            if(MobileParty.ConversationParty.LeaderHero.Clan == Hero.MainHero.Clan) { return true; }
             
             return false;
         }
