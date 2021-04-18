@@ -8,8 +8,9 @@ namespace CaravanTradeRoutesRON
     public class CaravansCampaignBehavior_ThinkNextDestination_Patch
     {
         public static void Postfix(ref Town __result, MobileParty caravanParty)
-        { 
-            if(caravanParty.LeaderHero.Clan != Hero.MainHero.Clan) { return; }
+        {
+                if (caravanParty.LeaderHero == null || Hero.MainHero.Clan == null || caravanParty.LeaderHero.Clan != Hero.MainHero.Clan) { return; }
+            
 
             bool caravanRegistered = SubModule.caravanTradeRoutes.TryGetValue(caravanParty, out var tradeRouteString);
 

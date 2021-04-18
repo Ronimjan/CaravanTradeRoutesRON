@@ -13,14 +13,19 @@ namespace CaravanTradeRoutesRON
     {
         public static readonly string xmlPath = string.Concat(BasePath.Name, "Modules/CaravanTradeRoutesRON/tradeRoutes.xml");
 
-        public static List<string> tradeRouteList;
-        public static Dictionary<string, Dictionary<int, Town>> tradeRoutes;
+        public static List<string> tradeRouteList = new List<string>();
+        public static Dictionary<string, Dictionary<int, Town>> tradeRoutes = new Dictionary<string, Dictionary<int, Town>>();
 
         [SaveableField(21360)]
-        public static Dictionary<MobileParty, string> currentDestination;
+        public static Dictionary<MobileParty, string> currentDestination = new Dictionary<MobileParty, string>();
 
         [SaveableField(21361)]
-        public static Dictionary<MobileParty, string> caravanTradeRoutes;
+        public static Dictionary<MobileParty, string> caravanTradeRoutes = new Dictionary<MobileParty, string>();
+
+        public SubModule()
+        {
+
+        }
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
