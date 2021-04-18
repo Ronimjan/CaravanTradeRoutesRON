@@ -22,16 +22,16 @@ namespace CaravanTradeRoutesRON
         [SaveableField(21361)]
         public static Dictionary<MobileParty, string> caravanTradeRoutes = new Dictionary<MobileParty, string>();
 
-        public SubModule()
-        {
-
-        }
-
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
             if (!(game.GameType is Campaign)) { return; }
 
-            new HarmonyLib.Harmony("CaravanTradeRoutesRON.patcher").PatchAll();
+            if (gameStarterObject is CampaignGameStarter starter)
+            {
+                starter.AddBehavior(new CaravanTradeRouteCampaignBehavior());
+            }
+
+            new Harmony("CaravanTradeRoutesRON.patcher").PatchAll();
         }
 
         public override void OnGameInitializationFinished(Game game)
