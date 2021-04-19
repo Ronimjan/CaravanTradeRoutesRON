@@ -14,8 +14,8 @@ namespace CaravanTradeRoutesRON
 
         public static List<string> tradeRouteList = new List<string>();
         public static Dictionary<string, Dictionary<int, Town>> tradeRoutes = new Dictionary<string, Dictionary<int, Town>>();
-        public static Dictionary<MobileParty, string> currentDestination;
-        public static Dictionary<MobileParty, string> caravanTradeRoutes;
+        public static Dictionary<MobileParty, string> currentDestination = new Dictionary<MobileParty, string>();
+        public static Dictionary<MobileParty, string> caravanTradeRoutes = new Dictionary<MobileParty, string>();
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {
