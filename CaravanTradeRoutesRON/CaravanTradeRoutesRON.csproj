@@ -91,7 +91,6 @@
   <ItemGroup>
     <Compile Include="CaravanTradeRouteCampaignBehavior.cs" />
     <Compile Include="CaravansCampaignBehavior_ThinkNextDestination_Patch.cs" />
-    <Compile Include="SaveTypeDefiner.cs" />
     <Compile Include="SubModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="SubModule.xml" />
