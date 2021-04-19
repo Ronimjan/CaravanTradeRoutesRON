@@ -59,7 +59,6 @@ namespace CaravanTradeRoutesRON
                         {
                             tempTownList.Add(count, town.Town);
                             count++;
-                            FileLog.Log(town.Name.ToString() + " is loaded into the tempTownList");
                         }
                     }
                 }
