@@ -31,7 +31,7 @@ namespace CaravanTradeRoutesRON
                     {
                         SubModule.caravanTradeRoutes.Remove(MobileParty.ConversationParty);
                     }
-                    SubModule.caravanTradeRoutes.Add(MobileParty.ConversationParty, "name");
+                    SubModule.caravanTradeRoutes.Add(MobileParty.ConversationParty, name);
                 }
 
                 starter.AddPlayerLine("trade_route_" + name, "caravan_trade_routes_answer", "trade_route_" + name, "Follow the " + name, null, new ConversationSentence.OnConsequenceDelegate(AddTradeRouteConsequence));

@@ -53,7 +53,6 @@ namespace CaravanTradeRoutesRON
             Dictionary<int, Town> tempTownList = new Dictionary<int, Town>();
             int count;
 
-
             foreach (XElement tradeRouteCount in listTradeRoutes)
             {
 
@@ -76,9 +75,10 @@ namespace CaravanTradeRoutesRON
                         }
                     }
                 }
-                tradeRoutes.Add(tradeRouteCount.Attribute("name").Value, tempTownList);
+                tradeRoutes.Add(tradeRouteCount.Attribute("name").Value, new Dictionary<int, Town>(tempTownList));
                 tradeRouteList.Add(tradeRouteCount.Attribute("name").Value);
                 FileLog.Log(tradeRouteCount.Attribute("name").Value + " is loaded into Dictionary containing " + tempTownList.Count.ToString() + " Elements");
+                tempTownList.Clear();
             }
         }
     }
