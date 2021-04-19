@@ -1,5 +1,7 @@
 ﻿using System;
 using TaleWorlds.CampaignSystem;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CaravanTradeRoutesRON
 {
@@ -41,8 +43,37 @@ namespace CaravanTradeRoutesRON
 
         public override void SyncData(IDataStore dataStore)
         {
-            dataStore.SyncData("currentDestinationDictionary", ref SubModule.currentDestination);
-            dataStore.SyncData("tradeRouteDictionary", ref SubModule.caravanTradeRoutes);
+            
+
+            if (dataStore.IsSaving)
+            {
+                var jsonString = JsonConvert.SerializeObject(SubModule.currentDestination);
+                dataStore.SyncData("currentDestination", ref jsonString);
+
+                jsonString = JsonConvert.SerializeObject(SubModule.caravanTradeRoutes);
+                dataStore.SyncData("caravanTradeRoutes", ref jsonString);
+            }
+
+            if (dataStore.IsLoading)
+            {
+                var jsonString = "";
+                if (dataStore.SyncData("currenDestination", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                {
+                    SubModule.currentDestination = JsonConvert.DeserializeObject<Dictionary<MobileParty, string>>(jsonString);
+                }
+                else
+                {
+                    SubModule.currentDestination = new Dictionary<MobileParty, string>();
+                }
+                if (dataStore.SyncData("caravanTradeRoutes", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                {
+                    SubModule.caravanTradeRoutes = JsonConvert.DeserializeObject<Dictionary<MobileParty, string>>(jsonString);
+                }
+                else
+                {
+                    SubModule.caravanTradeRoutes = new Dictionary<MobileParty, string>();
+                }
+            }
         }
 
         private static bool IsOwnedByHeroCondition()
