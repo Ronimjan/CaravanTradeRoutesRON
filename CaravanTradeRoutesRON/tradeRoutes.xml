@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<structure>
+	<tradeRoutes>
+		<tradeRoute name = "Western Trade Route">
+			<towns>
+				<town name = "Askar">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Quyaz">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Ortysia">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Charas">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Sargot">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Jaculan">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Galend">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Pen Cannoc">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Dunglanys">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Varcheg">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Omor">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Epicrotea">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Lageta">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Rhotae">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Amitatys">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Jalmarys">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Ortysia">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Quyaz">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Sanala">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Qasira">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+			</towns>
+		</tradeRoute>
+		<tradeRoute name = "Eastern Trade Route">
+			<towns>
+				<town name = "Hubyar">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+						</sell>
+				</town>
+				<town name = "Husn Fulq">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Danustica">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Akkalat">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Ortongard">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Baltakhand">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Tyal">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Amprela">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Myzea">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Syronea">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Phycaon">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Lycaron">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Poros">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Vostrum">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Onira">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Odokh">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Husn Fulq">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Razih">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+			</towns>
+		</tradeRoute>
+<!-- :ADD NEW TRADE ROUTES UNDERNEATH HERE: -->
+		
+<!-- Only for testing purpose. You can add this trade route by delete this line and the line marked as :DELETE THIS:.
+		<tradeRoute name = "Beginners Route">
+			<towns>
+				<town name = "Poros">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+				<town name = "Zeonica">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+			</towns>
+		</tradeRoute>
+		:DELETE THIS: -->
+	</tradeRoutes>
+</structure>
+
+<!-- TRADE ROUTE TEMPLATE
+	This is the basic schema of a trade Route. Add this underneath the line marked as :ADD NEW TRADE ROUTES UNDERNEATH HERE:. You can add as much towns as you want. 
+	The sections <buy></buy> & <sell></sell> are not used yet.
+
+		<tradeRoute name = "">
+			<towns>
+				<town name = "">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+						</sell>
+				</town>
+				<town name = "">
+					<buy>
+						<goods>
+							<good name=""/>
+						</goods>
+					</buy>
+					<sell>
+						<goods>
+							<good name=""/>
+						</goods>
+					</sell>
+				</town>
+			</towns>
+		</tradeRoute>
+-->

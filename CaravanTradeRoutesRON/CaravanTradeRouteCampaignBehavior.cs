@@ -43,8 +43,6 @@ namespace CaravanTradeRoutesRON
 
         public override void SyncData(IDataStore dataStore)
         {
-            
-
             if (dataStore.IsSaving)
             {
                 var jsonString = JsonConvert.SerializeObject(SubModule.currentDestination);
