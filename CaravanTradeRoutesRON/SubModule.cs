@@ -5,7 +5,6 @@ using TaleWorlds.MountAndBlade;
 using System.Xml.Linq;
 using TaleWorlds.Library;
 using HarmonyLib;
-using TaleWorlds.SaveSystem;
 
 namespace CaravanTradeRoutesRON
 {
