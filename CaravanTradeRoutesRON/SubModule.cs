@@ -12,6 +12,7 @@ namespace CaravanTradeRoutesRON
     {
         public static readonly string xmlPath = string.Concat(BasePath.Name, "Modules/CaravanTradeRoutesRON/tradeRoutes.xml");
 
+        public static float? modVersion;
         public static List<string> tradeRouteList = new List<string>();
         public static Dictionary<string, Dictionary<int, Town>> tradeRoutes = new Dictionary<string, Dictionary<int, Town>>();
         public static Dictionary<MobileParty, string> currentDestination = new Dictionary<MobileParty, string>();

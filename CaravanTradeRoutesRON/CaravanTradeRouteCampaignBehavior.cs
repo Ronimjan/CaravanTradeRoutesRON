@@ -43,33 +43,121 @@ namespace CaravanTradeRoutesRON
 
         public override void SyncData(IDataStore dataStore)
         {
+            Dictionary<string, string> currentDestinationString = new Dictionary<string, string>();
+            Dictionary<string, string> caravanTradeRoutesString = new Dictionary<string, string>();
+
+            Dictionary<string, string> temp = new Dictionary<string, string>();
+
             if (dataStore.IsSaving)
             {
-                var jsonString = JsonConvert.SerializeObject(SubModule.currentDestination);
-                dataStore.SyncData("currentDestination", ref jsonString);
+                foreach (MobileParty party in Campaign.Current.MobileParties)
+                {
+                    bool partyRegistredInCurrentDestination = SubModule.currentDestination.TryGetValue(party, out string destination);
+                    if (partyRegistredInCurrentDestination)
+                    {
+                        currentDestinationString.Add(party.ToString(), destination);
+                    }
 
-                jsonString = JsonConvert.SerializeObject(SubModule.caravanTradeRoutes);
-                dataStore.SyncData("caravanTradeRoutes", ref jsonString);
+                    bool partyRegistredInTradeRoutes = SubModule.caravanTradeRoutes.TryGetValue(party, out string tradeRoute);
+                    if (partyRegistredInTradeRoutes)
+                    {
+                        caravanTradeRoutesString.Add(party.ToString(), tradeRoute);
+                    }
+                }
+
+                var jsonString = JsonConvert.SerializeObject(currentDestinationString);
+                dataStore.SyncData("currentDestinationString", ref jsonString);
+
+                jsonString = JsonConvert.SerializeObject(caravanTradeRoutesString);
+                dataStore.SyncData("caravanTradeRoutesString", ref jsonString);
+
+                jsonString = JsonConvert.SerializeObject(SubModule.modVersion);
+                dataStore.SyncData("modVersionCaravanTradeRoutesRON", ref jsonString);
             }
 
             if (dataStore.IsLoading)
             {
-                var jsonString = "";
-                if (dataStore.SyncData("currenDestination", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                string jsonString = "";
+
+                if (dataStore.SyncData("modVersionCaravanTradeRoutesRON", ref jsonString) && !string.IsNullOrEmpty(jsonString))
                 {
-                    SubModule.currentDestination = JsonConvert.DeserializeObject<Dictionary<MobileParty, string>>(jsonString);
+                    SubModule.modVersion = JsonConvert.DeserializeObject<float?>(jsonString);
+                }
+
+                if (!SubModule.modVersion.HasValue)
+                {
+                    if (dataStore.SyncData("currentDestination", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                    {
+                        temp = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+
+                        foreach (MobileParty party in Campaign.Current.MobileParties)
+                        {
+                            bool partyRegistred = temp.TryGetValue(party.ToString(), out string destination);
+                            if (partyRegistred)
+                            {
+                                SubModule.currentDestination.Add(party, destination);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SubModule.currentDestination = new Dictionary<MobileParty, string>();
+                    }
+
+                    if (dataStore.SyncData("caravanTradeRoutes", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                    {
+                        temp = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+
+                        foreach (MobileParty party in Campaign.Current.MobileParties)
+                        {
+                            bool partyRegistred = temp.TryGetValue(party.ToString(), out string tradeRoute);
+                            if (partyRegistred)
+                            {
+                                SubModule.caravanTradeRoutes.Add(party, tradeRoute);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SubModule.caravanTradeRoutes = new Dictionary<MobileParty, string>();
+                    }
+
+                    SubModule.modVersion = 1.3f;
                 }
                 else
                 {
-                    SubModule.currentDestination = new Dictionary<MobileParty, string>();
-                }
-                if (dataStore.SyncData("caravanTradeRoutes", ref jsonString) && !string.IsNullOrEmpty(jsonString))
-                {
-                    SubModule.caravanTradeRoutes = JsonConvert.DeserializeObject<Dictionary<MobileParty, string>>(jsonString);
-                }
-                else
-                {
-                    SubModule.caravanTradeRoutes = new Dictionary<MobileParty, string>();
+                    if (dataStore.SyncData("currentDestinationString", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                    {
+                        currentDestinationString = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+                        foreach (MobileParty party in Campaign.Current.MobileParties)
+                        {
+                            bool partyRegistred = currentDestinationString.TryGetValue(party.ToString(), out string destination);
+                            if (partyRegistred)
+                            {
+                                SubModule.currentDestination.Add(party, destination);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SubModule.currentDestination = new Dictionary<MobileParty, string>();
+                    }
+                    if (dataStore.SyncData("caravanTradeRoutesString", ref jsonString) && !string.IsNullOrEmpty(jsonString))
+                    {
+                        caravanTradeRoutesString = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+                        foreach (MobileParty party in Campaign.Current.MobileParties)
+                        {
+                            bool partyRegistred = caravanTradeRoutesString.TryGetValue(party.ToString(), out string tradeRoute);
+                            if (partyRegistred)
+                            {
+                                SubModule.caravanTradeRoutes.Add(party, tradeRoute);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SubModule.caravanTradeRoutes = new Dictionary<MobileParty, string>();
+                    }
                 }
             }
         }
