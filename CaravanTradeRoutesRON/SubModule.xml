@@ -1,14 +1,14 @@
 ﻿<Module>
   <Name value="CaravanTradeRoutesRON a Bannerlord Mod"/>
   <Id value="CaravanTradeRoutesRON"/>
-  <Version value="v1.0.0"/>
+  <Version value="v2.0.0"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
   <DependedModules>
-    <DependedModule Id="Native"/>
-    <DependedModule Id="SandBoxCore"/>
-    <DependedModule Id="Sandbox"/>
-    <DependedModule Id="StoryMode" />
+    <DependedModule Id="Native" Version="e1.5.10"/>
+    <DependedModule Id="SandBoxCore" Version="e1.5.10"/>
+    <DependedModule Id="Sandbox" Version="e1.5.10"/>
+    <DependedModule Id="StoryMode" Version="e1.5.10"/>
   </DependedModules>
   <SubModules>
     <SubModule>

@@ -4,462 +4,463 @@
 		<tradeRoute name = "Western Trade Route">
 			<towns>
 				<town name = "Askar">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Quyaz">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Ortysia">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Charas">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Sargot">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Jaculan">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Galend">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Pen Cannoc">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Dunglanys">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Varcheg">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Omor">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Epicrotea">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Lageta">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Rhotae">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Amitatys">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Jalmarys">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Ortysia">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Quyaz">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Sanala">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Qasira">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 			</towns>
 		</tradeRoute>
+		
 		<tradeRoute name = "Eastern Trade Route">
 			<towns>
 				<town name = "Hubyar">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
-						</sell>
+					</sell>
 				</town>
 				<town name = "Husn Fulq">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Danustica">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Akkalat">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Ortongard">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Baltakhand">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Tyal">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Amprela">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Myzea">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Syronea">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Phycaon">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Lycaron">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Poros">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Vostrum">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Onira">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Odokh">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Husn Fulq">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Razih">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
@@ -471,26 +472,26 @@
 		<tradeRoute name = "Beginners Route">
 			<towns>
 				<town name = "Poros">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
 				<town name = "Zeonica">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>
@@ -501,32 +502,41 @@
 </structure>
 
 <!-- TRADE ROUTE TEMPLATE
-	This is the basic schema of a trade Route. Add this underneath the line marked as :ADD NEW TRADE ROUTES UNDERNEATH HERE:. You can add as much towns as you want. 
-	The sections <buy></buy> & <sell></sell> are not used yet.
+	This is the basic schema of a trade Route. Add this underneath the line marked as :ADD NEW TRADE ROUTES UNDERNEATH HERE:. You can add as much towns as you want.
+	
+	Explanation of the attributes and elements:
+	<tradeRoute name = "">: The name the trade route will have ingame.
+	<town name = "">: The name of the town that should be added to the route. Make sure to only use names from the base game, support for moded maps isn't given yet, as long as they don't add their cities to the base games list.
+	<buy><buy/>: The goods that should be bought.
+	<buy only="">: Add either 0 or 1. 0 will make the caravan explore other options, if these goods aren't available (or too expensive). This is the standart option. 1 will make the caravan only buy these goods.
+	<sell><sell/>: The goods that should be sold.
+	<sell only="">: Look at "<buy only="">" for the use of the parameters (of course this one sets the sell-behavior, not the buy-behavior.
+	<good name="">: The name of the good that should be bought/sold. Make sure to only use names from the base game, support for item mods isn't given yet, as long as they don't add their items to the base games list.
+	<good price="">: The minimum (sell) or maximum (buy) price a item must have to be bought/sold.
 
 		<tradeRoute name = "">
 			<towns>
 				<town name = "">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
-						</sell>
+					</sell>
 				</town>
 				<town name = "">
-					<buy>
+					<buy only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</buy>
-					<sell>
+					<sell only="0">
 						<goods>
-							<good name=""/>
+							<good name="" price=""/>
 						</goods>
 					</sell>
 				</town>

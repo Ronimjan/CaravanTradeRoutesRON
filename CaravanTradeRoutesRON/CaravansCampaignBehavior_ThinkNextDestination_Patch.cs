@@ -25,7 +25,7 @@ namespace CaravanTradeRoutesRON
 
             for(int i = 0; i < tradeRoutesTownDictionary.Count; i++)
             {
-                if (destinationLoaded && tradeRoutesTownDictionary[i].Name.ToString() == oldTownString)
+                if (destinationLoaded && tradeRoutesTownDictionary[i].Item1.Name.ToString() == oldTownString)
                 {
                     index = i;
                     break;
@@ -36,13 +36,13 @@ namespace CaravanTradeRoutesRON
 
             if (destinationLoaded && (caravanParty.CurrentSettlement == null || caravanParty.CurrentSettlement.ToString() != oldTownString)) { index -= 1; }
 
-            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index+1, out var loadedSettlement);
+            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index+1, out var loadedTripple);
 
             if (!townLoaded) { return; }
             
-            __result = loadedSettlement;
+            __result = loadedTripple.Item1;
             SubModule.currentDestination.Remove(caravanParty);
-            SubModule.currentDestination.Add(caravanParty, loadedSettlement.Name.ToString());
+            SubModule.currentDestination.Add(caravanParty, loadedTripple.Item1.Name.ToString());
         }
     }
 }
