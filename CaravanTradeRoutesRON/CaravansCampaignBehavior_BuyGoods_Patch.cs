@@ -92,6 +92,10 @@ namespace CaravanTradeRoutesRON
                     {
                         amount = (int)((float)caravanParty.Party.NumberOfAllMembers * 0.6f) - numberOfLivestockAnimals;
                     }
+                    else if (itemCopy.EquipmentElement.Item.HorseComponent.IsPackAnimal && (float)(numberOfPackAnimals + amount) > (float)caravanParty.Party.NumberOfAllMembers * 0.6f)
+                    {
+                        amount = (int)((float)caravanParty.Party.NumberOfAllMembers * 0.6f) - numberOfPackAnimals;
+                    }
                 }
                 else if (tuple.Item1.HorseComponent != null && tuple.Item1.HorseComponent.IsMount)
                 {
