@@ -23,7 +23,7 @@ namespace CaravanTradeRoutesRON
 
             int index = -1;
 
-            for(int i = 0; i < tradeRoutesTownDictionary.Count; i++)
+            for (int i = 0; i < tradeRoutesTownDictionary.Count; i++)
             {
                 if (destinationLoaded && tradeRoutesTownDictionary[i].Item1.Name.ToString() == oldTownString)
                 {
@@ -36,10 +36,10 @@ namespace CaravanTradeRoutesRON
 
             if (destinationLoaded && (caravanParty.CurrentSettlement == null || caravanParty.CurrentSettlement.ToString() != oldTownString)) { index -= 1; }
 
-            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index+1, out var loadedTripple);
+            bool townLoaded = tradeRoutesTownDictionary.TryGetValue(index + 1, out var loadedTripple);
 
             if (!townLoaded) { return; }
-            
+
             __result = loadedTripple.Item1;
             SubModule.currentDestination.Remove(caravanParty);
             SubModule.currentDestination.Add(caravanParty, loadedTripple.Item1.Name.ToString());

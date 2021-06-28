@@ -67,7 +67,7 @@ namespace CaravanTradeRoutesRON
                             bool buyInt = int.TryParse(buyElement.Attribute("only").Value, out int BuyValue);
                             if (buyInt == false)
                             {
-                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <buy only=> element. A parameter which is not a number was parsed."));
+                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <buy only=> element at " + town.Name.ToString() + ". A parameter which is not a number was parsed."));
                             }
                             else if (BuyValue == 0)
                             {
@@ -79,13 +79,13 @@ namespace CaravanTradeRoutesRON
                             }
                             else
                             {
-                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <buy only=> element. A parameter not 0 or 1 was parsed"));
+                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <buy only=> element at " + town.Name.ToString() + ". A parameter not 0 or 1 was parsed"));
                             }
 
                             bool sellInt = int.TryParse(sellElement.Attribute("only").Value, out int SellValue);
                             if (sellInt == false)
                             {
-                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <sell only=> element. A parameter which is not a number was parsed."));
+                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <sell only=> element at " + town.Name.ToString() + ". A parameter which is not a number was parsed."));
                             }
                             else if (SellValue == 0)
                             {
@@ -97,7 +97,7 @@ namespace CaravanTradeRoutesRON
                             }
                             else
                             {
-                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <sell only=> element. A parameter not 0 or 1 was parsed"));
+                                InformationManager.DisplayMessage(new InformationMessage("A .xml problem occured regarding the <sell only=> element at " + town.Name.ToString() + ". A parameter not 0 or 1 was parsed"));
                             }
 
                             IEnumerable<XElement> buyItems = buyElement.Elements();
@@ -108,7 +108,10 @@ namespace CaravanTradeRoutesRON
                                 {
                                     if (buyItem.Attribute("name").Value == item.Name.ToString())
                                     {
-                                        buyItemList.Add((item,  int.Parse(buyItem.Attribute("price").Value)));
+                                        if (int.TryParse(buyItem.Attribute("price").Value, out int price))
+                                        {
+                                            buyItemList.Add((item, int.Parse(buyItem.Attribute("price").Value)));
+                                        }
                                     }
                                 }
                             }
@@ -118,7 +121,10 @@ namespace CaravanTradeRoutesRON
                                 {
                                     if (sellItem.Attribute("name").Value == item.Name.ToString())
                                     {
-                                        sellItemList.Add((item, int.Parse(sellItem.Attribute("price").Value)));
+                                        if (int.TryParse(sellItem.Attribute("price").Value, out int price))
+                                        {
+                                            buyItemList.Add((item, int.Parse(sellItem.Attribute("price").Value)));
+                                        }
                                     }
                                 }
                             }
