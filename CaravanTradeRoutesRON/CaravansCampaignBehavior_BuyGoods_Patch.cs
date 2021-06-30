@@ -106,7 +106,7 @@ namespace CaravanTradeRoutesRON
                 SellItemsAction.Apply(town.Owner, caravanParty.Party, itemCopy, amount, town.Owner.Settlement);
             }
 
-            return townSettings.Item4;
+            return !townSettings.Item4;
         }
     }
 }

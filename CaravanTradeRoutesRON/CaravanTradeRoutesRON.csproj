@@ -91,6 +91,7 @@
   <!-- Files & Classes -->
   <ItemGroup>
     <Compile Include="CaravansCampaignBehavior_BuyGoods_Patch.cs" />
+    <Compile Include="CaravansCampaignBehavior_SellGoods_Patch.cs" />
     <Compile Include="CaravanTradeRouteCampaignBehavior.cs" />
     <Compile Include="CaravansCampaignBehavior_ThinkNextDestination_Patch.cs" />
     <Compile Include="SubModule.cs" />

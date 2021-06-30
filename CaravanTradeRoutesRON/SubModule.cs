@@ -61,8 +61,8 @@ namespace CaravanTradeRoutesRON
                     {
                         if (town.IsTown && town.Name.ToString() == townCount.Attribute("name").Value)
                         {
-                            XElement buyElement = townCount.Element("Buy Goods");
-                            XElement sellElement = townCount.Element("Sell Goods");
+                            XElement buyElement = townCount.Element("buy");
+                            XElement sellElement = townCount.Element("sell");
 
                             bool buyInt = int.TryParse(buyElement.Attribute("only").Value, out int BuyValue);
                             if (buyInt == false)
@@ -73,7 +73,7 @@ namespace CaravanTradeRoutesRON
                             {
                                 buyOnly = false;
                             }
-                            else if(BuyValue == 1)
+                            else if (BuyValue == 1)
                             {
                                 buyOnly = true;
                             }
@@ -102,28 +102,32 @@ namespace CaravanTradeRoutesRON
 
                             IEnumerable<XElement> buyItems = buyElement.Elements();
                             IEnumerable<XElement> sellItems = sellElement.Elements();
-                            foreach(XElement buyItem in buyItems)
+                            foreach (XElement buyItem in buyItems)
                             {
-                                foreach(ItemObject item in ItemObject.All)
+                                if (buyItem.Attribute("name") == null) { continue; }
+
+                                foreach (ItemObject item in ItemObject.All)
                                 {
                                     if (buyItem.Attribute("name").Value == item.Name.ToString())
                                     {
                                         if (int.TryParse(buyItem.Attribute("price").Value, out int price))
                                         {
-                                            buyItemList.Add((item, int.Parse(buyItem.Attribute("price").Value)));
+                                            buyItemList.Add((item, price));
                                         }
                                     }
                                 }
                             }
                             foreach (XElement sellItem in sellItems)
                             {
+                                if (sellItem.Attribute("name") == null) { continue; }
+
                                 foreach (ItemObject item in ItemObject.All)
                                 {
                                     if (sellItem.Attribute("name").Value == item.Name.ToString())
                                     {
                                         if (int.TryParse(sellItem.Attribute("price").Value, out int price))
                                         {
-                                            buyItemList.Add((item, int.Parse(sellItem.Attribute("price").Value)));
+                                            sellItemList.Add((item, price));
                                         }
                                     }
                                 }
@@ -137,12 +141,12 @@ namespace CaravanTradeRoutesRON
                 }
 
                 bool tradeRouteErrorAlreadyRegistered = tradeRoutes.TryGetValue(tradeRouteCount.Attribute("name").Value, out Dictionary<int, (Town, List<(ItemObject, int)>, List<(ItemObject, int)>, bool, bool)> tradeRouteError);
-                if(tradeRouteErrorAlreadyRegistered)
+                if (tradeRouteErrorAlreadyRegistered)
                 {
                     bool errorTown1 = true;
                     bool errorTown2 = true;
                     int num = 0;
-                    while(errorTown1 && errorTown2)
+                    while (errorTown1 && errorTown2)
                     {
                         errorTown1 = tradeRouteError.TryGetValue(num, out (Town, List<(ItemObject, int)>, List<(ItemObject, int)>, bool, bool) townError1);
                         errorTown2 = tempTownList.TryGetValue(num, out (Town, List<(ItemObject, int)>, List<(ItemObject, int)>, bool, bool) townError2);
